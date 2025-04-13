@@ -1,0 +1,253 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #e7decf;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 64px;
+  background-color: #e7decf;
+  border-bottom: 1px solid rgba(0, 28, 48, 0.1);
+  z-index: 40;
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.title {
+  font-family: 'krylon', serif;
+  font-size: 3rem;
+  color: #001c30;
+}
+
+.mainContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.emptyState {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  background: rgba(246, 243, 238, 0.5);
+  border-radius: 1rem;
+  border: 1px dashed #d1d5db;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: #9ca3af;
+}
+
+.daysList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.daySection {
+  position: relative;
+}
+
+.dayHeader {
+  margin-bottom: 2rem;
+}
+
+.dayNumberWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #17403a;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #f6f3ee;
+}
+
+.dayNumber {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dayContent {
+  background-color: rgba(246, 243, 238, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.dayTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #001c30;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #17403a;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.activitiesWrapper {
+  border-top: 1px solid rgba(0, 28, 48, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.activitiesTitle {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.activityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(246, 243, 238, 0.5);
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.activityItem:hover {
+  transform: translateX(8px);
+  background-color: rgba(246, 243, 238, 0.8);
+}
+
+.activityIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(23, 64, 58, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activityIcon {
+  width: 16px;
+  height: 16px;
+  color: #17403a;
+}
+
+.activityContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.activityTime {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  font-weight: 500;
+}
+
+.activityText {
+  color: #001c30;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.activityDuration {
+  font-family: var(--font-geist-mono);
+  font-size: 0.8rem;
+  color: #17403a;
+  opacity: 0.8;
+}
+
+.notesSection {
+  border-top: 1px solid rgba(0, 28, 48, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.notesTitle {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.notesText {
+  color: #17403a;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .mainContent {
+    padding: 2rem 1rem;
+  }
+
+  .dayContent {
+    padding: 1.5rem;
+  }
+
+  .activityItem {
+    padding: 1rem;
+  }
+
+  .dayTitle {
+    font-size: 1.25rem;
+  }
+
+  .description,
+  .activityText,
+  .notesText {
+    font-size: 1rem;
+  }
+}

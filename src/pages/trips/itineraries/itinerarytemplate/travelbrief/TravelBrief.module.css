@@ -1,0 +1,181 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #e7decf;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 64px;
+  background-color: #e7decf;
+  border-bottom: 1px solid rgba(0, 28, 48, 0.1);
+  z-index: 40;
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.title {
+  font-family: 'krylon', serif;
+  font-size: 3rem;
+  color: #001c30;
+}
+
+.mainContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.card {
+  background-color: rgba(246, 243, 238, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.tabsList {
+  width: 100% !important;
+  background-color: rgba(246, 243, 238, 0.5) !important;
+  padding: 0.5rem !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 2rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.5rem !important;
+  height: 4rem !important;
+}
+
+.tabsTrigger {
+  width: 100% !important;
+  height: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 0 1.5rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #17403a !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.tabsTrigger[data-state="active"] {
+  background-color: white !important;
+  color: #001c30 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tabsTrigger:hover:not([data-state="active"]) {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.tabsContent {
+  padding: 1.5rem;
+  background-color: rgba(246, 243, 238, 0.3);
+  border-radius: 0.75rem;
+}
+
+.text {
+  color: #17403a;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.subtitle {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.flightInfo, .accommodationInfo {
+  background-color: rgba(246, 243, 238, 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.flightInfo:hover, .accommodationInfo:hover {
+  transform: translateX(8px);
+  background-color: rgba(246, 243, 238, 0.8);
+}
+
+.accommodationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.days {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+}
+
+.accommodationDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailLabel {
+  font-family: var(--font-geist-mono);
+  font-size: 0.8rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detailValue {
+  color: #001c30;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .mainContent {
+    padding: 2rem 1rem;
+  }
+
+  .tabsList {
+    height: auto !important;
+  }
+
+  .tabsTrigger {
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    height: 4rem !important;
+  }
+
+  .accommodationDetails {
+    grid-template-columns: 1fr;
+  }
+}

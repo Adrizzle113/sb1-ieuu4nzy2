@@ -1,0 +1,111 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #e7decf;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 64px;
+  background-color: #e7decf;
+  border-bottom: 1px solid rgba(0, 28, 48, 0.1);
+  z-index: 40;
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.title {
+  font-family: 'krylon', serif;
+  font-size: 3rem;
+  color: #001c30;
+}
+
+.mainContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.included,
+.excluded {
+  background-color: rgba(246, 243, 238, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.subtitle {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9rem;
+  color: #17403a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(246, 243, 238, 0.5);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.listItem:hover {
+  transform: translateX(8px);
+  background-color: rgba(246, 243, 238, 0.8);
+}
+
+.checkmark,
+.cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.checkmark {
+  background-color: rgba(23, 64, 58, 0.1);
+  color: #17403a;
+}
+
+.cross {
+  background-color: rgba(139, 0, 0, 0.1);
+  color: #8B0000;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .mainContent {
+    padding: 2rem 1rem;
+  }
+
+  .included,
+  .excluded {
+    padding: 1.5rem;
+  }
+}

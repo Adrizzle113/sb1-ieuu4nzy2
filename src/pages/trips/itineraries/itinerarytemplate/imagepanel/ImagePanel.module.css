@@ -1,0 +1,51 @@
+.leftPanel {
+  margin-top: -64px;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: 50%;
+  height: calc(100vh - 64px);
+  background-color: #1a1a1a;
+  overflow: hidden;
+  display: none;
+  height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .leftPanel {
+    display: block;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
+}
